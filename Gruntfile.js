@@ -3,15 +3,15 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON( 'package.json' ),
     watch: {
+      html: {
+        files: ['src/*.html']
+      },
+      js: {
+        files: ['src/js/*.js']
+      },
       options: {
         livereload: true,
       },
-      html: {
-        files: ['src/*.html']      
-      },
-      js: {
-        files: ['src/js/*.js']        
-      }      
     },
     connect: {
       server: {
