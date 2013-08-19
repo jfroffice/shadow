@@ -7,14 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="http://localhost:35729/livereload.js"></script>
     <style>
+    body {
+      font-family: arial;
+      background-color: #60d7a9;
+    }
+
+    ul {
+      padding-left: 10px;
+      list-style: none;
+    }
+
+    ul > li {
+      background-color: rgba(0, 0, 0, 0.1);
+      width: 250px;
+      margin: 10px 0;
+      padding: 10px;
+    }
+
+    li > a {
+      text-decoration: none;
+      color: #FFF;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    li > a:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
     .content {
       display: block;
       position: absolute;
-      top: 150px;
-      left: 150px;
+      top: 16px;
+      left: 350px;
       width: 800px;
       height: 600px;
-      border: 1px solid #888;
     }
 
     .frame {
@@ -34,10 +61,10 @@
   <div class="aside">
      <ul>
       <li>
-        <a href='javascript:load("./experience-1-1")'>experience-1-1 (without Shadow DOM)</a>
+        <a href='javascript:load("./experience-1-1")'>1-1 (without Shadow DOM)</a>
       </li>
       <li>
-        <a href='javascript:load("./experience-1-2")'>experience-1-2 (with Shadow DOM)</a>
+        <a href='javascript:load("./experience-1-2")'>1-2 (with Shadow DOM)</a>
       </li>
     </ul>
   </div>

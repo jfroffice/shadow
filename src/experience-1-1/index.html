@@ -4,34 +4,38 @@
     <meta charset="utf-8">
     <title>Shadow DOM - Experience n°1</title>
     <meta name="description" content="Shadow Dom Experience 1-1">
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    </style>
 </head>
 <body>
   <style>
-    .outer {
-      border: 2px solid brown;
-      border-radius: 1em;
-      background: red;
-      font-size: 20pt;
-      width: 12em;
-      height: 7em;
-      text-align: center;
+    .widget {
+      background-color: rgba(0,0,0,0.15);
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      width: 250px;
     }
-    .boilerplate {
+    .header,
+    .footer,
+    .content {
       color: white;
-      font-family: sans-serif;
-      padding: 0.5em;
+      padding: 12px;
     }
-    .name {
-      color: black;
-      background: white;
-      font-family: "Marker Felt", cursive;
-      font-size: 45pt;
-      padding-top: 0.2em;
+    .content {
+      font-weight: normal;
+      background-color: rgba(255,255,255,0.1);
+      height: 150px;
     }
   </style>
-  <div class="outer">
-    <div class="boilerplate">Hi! My name is</div>
-    <div class="name">John</div>
+  <div class="widget">
+    <div class="header">Header</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
   </div>
 </body>
 </html>
