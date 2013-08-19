@@ -5,81 +5,51 @@
     <title>Shadow DOM test</title>
     <meta name="description" content="Shadow Dom test">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/style.css">
     <script src="http://localhost:35729/livereload.js"></script>
+    <style>
+    .content {
+      display: block;
+      position: absolute;
+      top: 150px;
+      left: 150px;
+      width: 800px;
+      height: 600px;
+      border: 1px solid #888;
+    }
+
+    .frame {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      outline: none;
+      resize: none;
+    }
+    </style>
 </head>
 <body>
-  <!--<div class="container">This is really cool 2 !</div>
-  <div id="example1"></div>-->
-  <style>
-.outer {
-  border: 2px solid brown;
-  border-radius: 1em;
-  background: red;
-  font-size: 20pt;
-  width: 12em;
-  height: 7em;
-  text-align: center;
-}
-.boilerplate {
-  color: white;
-  font-family: sans-serif;
-  padding: 0.5em;
-}
-.name {
-  color: black;
-  background: white;
-  font-family: "Marker Felt", cursive;
-  font-size: 45pt;
-  padding-top: 0.2em;
-}
-</style>
-<div class="outer">
-  <div class="boilerplate">
-    Hi! My name is
+  <div class="aside">
+     <ul>
+      <li>
+        <a href='javascript:load("./experience-1-1")'>experience-1-1 (without Shadow DOM)</a>
+      </li>
+      <li>
+        <a href='javascript:load("./experience-1-2")'>experience-1-2 (with Shadow DOM)</a>
+      </li>
+    </ul>
   </div>
-  <div class="name">
-    Bob
+  <div class="content">
+    <iframe id="frame" class="frame" src=""></iframe>
   </div>
-</div>
-<div id="nameTag"></div>
-<template id="nameTagTemplate">
-<style>
-.outer {
-  border: 2px solid brown;
-  border-radius: 1em;
-  background: red;
-  font-size: 20pt;
-  width: 12em;
-  height: 7em;
-  text-align: center;
-}
-.boilerplate {
-  color: white;
-  font-family: sans-serif;
-  padding: 0.5em;
-}
-.name {
-  color: black;
-  background: white;
-  font-family: "Marker Felt", cursive;
-  font-size: 45pt;
-  padding-top: 0.2em;
-}
-
-</style>
-<div class="outer">
-  <div class="boilerplate">
-    Hi! My name is
-  </div>
-  <div class="name">
-    <content></content>
-  </div>
-</div>
-</template>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-2.0.3.min.js"><\/script>')</script>
-  <script src="/js/go.js"></script>
+  <script>
+    function load(src) {
+      $('#frame').attr('src', src);
+    }
+  </script>
 </body>
 </html>

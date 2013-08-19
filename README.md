@@ -7,4 +7,9 @@ Regarding async templating on client side.
 
 What is the gap between experimental and production ?
 
+Starting
+--------
 
+```
+grunt dev
+```
