@@ -55,16 +55,22 @@
       outline: none;
       resize: none;
     }
+
+    .note {
+      font-size: 10px;
+      margin: 2px 0;
+    }
     </style>
 </head>
 <body>
   <div class="aside">
      <ul>
       <li>
-        <a href='javascript:load("./experience-1-1")'>1-1 (without Shadow DOM)</a>
+        <a href='javascript:load("./experience-1-1")'>1-1 (default)</a>
       </li>
       <li>
         <a href='javascript:load("./experience-1-2")'>1-2 (with Shadow DOM)</a>
+        <p class="note">only works in Chrome 25+</p>
       </li>
     </ul>
   </div>
