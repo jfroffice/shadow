@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Shadow DOM - Experience n°1-4</title>
+    <meta name="description" content="Shadow Dom Experience 1-4">
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    </style>
+    <script type="text/javascript" src="../js/ShadowDOM.min.js"></script>
+</head>
+<body>
+  <div id="widgetTag">
+    <header>Header</header>
+    <div class="content">Content</div>
+    <footer>Footer</footer>
+  </div>
+  <template id="widgetTagTemplate">
+    <style>
+      .widget {
+        background-color: rgba(0,0,0,0.15);
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        width: 250px;
+      }
+      header,
+      footer,
+      .content {
+        color: white;
+        padding: 12px;
+      }
+      .content {
+        font-weight: normal;
+        background-color: rgba(255,255,255,0.1);
+        height: 150px;
+      }
+    </style>
+    <div class="widget">
+      <content select="header"></content>
+      <div style="border: 2px solid #0F0;">
+        <content select=".content"></content>
+      </div>
+      <div style="border: 2px solid #f00;">
+        <content select="footer"></content>
+      </div>
+    </div>
+  </template>
+  <script>
+  var root = document.querySelector('#widgetTag'),
+      //shadow = root.webkitCreateShadowRoot(),
+      shadow = root.createShadowRoot(),
+      template = document.querySelector('#widgetTagTemplate');
+
+  shadow.appendChild(template.content);
+  </script>
+</body>
+</html>
