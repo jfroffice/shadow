@@ -26,13 +26,13 @@
 
     li > a {
       text-decoration: none;
-      color: #FFF;
+      color: #EAEAEA;
       font-size: 18px;
       font-weight: bold;
     }
 
     li > a:hover {
-      color: rgba(255, 255, 255, 0.8);
+      color: #FFF;
     }
 
     .content {
@@ -60,6 +60,14 @@
       font-size: 10px;
       margin: 2px 0;
     }
+
+    .warning {
+      color: #F00;
+    }
+
+    li > a.warning:hover {
+      color: #A00;
+    }
     </style>
 </head>
 <body>
@@ -78,6 +86,9 @@
       </li>
       <li>
         <a href='javascript:load("./experience-1-4")'>1-4 (content with .class)</a>
+      </li>
+      <li>
+        <a class="warning" href='javascript:load("./experience-1-5")'>1-5 (style encapsultation)</a>
       </li>
     </ul>
   </div>
