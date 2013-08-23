@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Shadow DOM - Experience n°1-9</title>
+    <meta name="description" content="Shadow Dom Experience 1-9">
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+        background-color: #0F0;
+     }
+    </style>
+    <script type="text/javascript" src="../js/ShadowDOM.min.js"></script>
+</head>
+<body>
+  <div>
+    <h2>Header DOM</h2>
+  </div>
+  <div id="tag">
+    <h2>Header Host</h2>
+  </div>
+  <style>
+      h2 {
+        color: #f00;
+      }
+    </style>
+  <template id="tag-template">
+    <style>
+      h2 {
+        color: #ff0;
+      }
+
+      @host {
+        div {
+          background-color: #F00;
+        }
+      }
+    </style>
+    <h2>Header Shadow DOM</h2>
+  </template>
+  <script>
+  var root = document.querySelector('#tag'),
+      //shadow = root.webkitCreateShadowRoot(),
+      shadow = root.createShadowRoot(),
+      template = document.querySelector('#tag-template');
+
+  shadow.appendChild(template.content);
+  </script>
+</body>
+</html>
