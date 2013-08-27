@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Shadow DOM - Experience n°1-10</title>
+    <meta name="description" content="Shadow Dom Experience 1-10">
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+        background-color: #0F0;
+     }
+
+     div::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      background-color: blue;
+      width: 10px;
+      height: 40px;
+    }
+    </style>
+</head>
+<body>
+  <div>
+    <div pseudo="x-slider-thumb">456</div>
+  </div>
+</body>
+</html>
