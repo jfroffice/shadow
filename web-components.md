@@ -5,6 +5,8 @@ Web Components is the collective name for a series of W3C modules that introduce
 Useful Links
 ============
 http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/
+http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/
+http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301/
 https://plus.google.com/103330502635338602217/posts
 http://html5-demos.appspot.com/static/shadowdom-visualizer/index.html
 http://x-tags.org/
